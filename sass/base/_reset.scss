@@ -20,13 +20,34 @@ ul {
     padding: 0;
 }
 
+a {
+    text-decoration: none;
+}
+
 body {
     margin: 0; // Remove the margin in all browsers.
     // font-family: $montserrat;
     background-color: $background;
     height: 100vh;
+    font-family: $default;
+    font-weight: 300;
 }
 
-h1 {
+h1, h2, h3, h4, h5, h6 {
     margin: 0;
+    font-weight: inherit;
+}
+
+.container {
+    max-width: $container;
+    margin: 0 auto;
+}
+
+.container-flex {
+    display: flex;
+    justify-content: center;
+}
+
+.center {
+    text-align: center;
 }
