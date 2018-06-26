@@ -10,7 +10,7 @@ var server = require('gulp-server-livereload');
 
 gulp.task('sass', function() {
   return gulp.src('./sass/**/*.scss', {verbose: true})
-    .pipe(wait(50))
+    .pipe(wait(100))
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('./dist'));
 });
@@ -18,7 +18,7 @@ gulp.task('sass', function() {
 // Watch task
 gulp.task('default', function() {
     gulp.src('')
-        .pipe(wait(100))
+        .pipe(wait(200))
         .pipe(server({
             livereload: true,
             open: true

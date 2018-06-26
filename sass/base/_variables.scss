@@ -1,25 +1,29 @@
 
-
 // colors
-// *****
+$info: #3498db;
+$warning: #f79f1f;
+$primary: #747d8c;
+$secondary: #ced6e0;
+$gray: #f9f9f9;
+$dark: #2f3542;
 
-$main: #2f3542;
+$body: #fff;
+$footer: $dark;
 
-$secondary: #3498db;
+$button-warning: $warning;
+$quote-border: #ffeb00;
 
-$light: #ced6e0;
+// shadow
+$shadow: 0 0 22px 4px rgba(0,0,0,.12);
 
-$text: #747d8c;
-
-// body
-$background: #fff;
-
-$background-secondary: #f9f9f9;
-
-$button: #f79f1f;
-
-// sizes:
+// sizes
 $container: 1000px;
 
-$default: 'Raleway', sans-serif;
-$second: 'Work Sans', sans-serif;
+// fonts
+$sans-serif: 'Raleway', sans-serif;
+$serif: 'Roboto Slab', serif;
+
+$light: 300;
+$normal: 400;
+$semibold: 500;
+$bold: 700;

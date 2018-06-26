@@ -1,8 +1,3 @@
-.header {
-    // display: flex;
-    // align-items: flex-end;
-}
-
 .nav {
     text-align: right;
 }
@@ -11,19 +6,19 @@
     display: inline-flex;
 
     a {
-        color: $main;
+        color: $primary;
         padding: 10px 30px;
         display: inline-block;
-        border-bottom: 3px solid $light;
+        border-bottom: 3px solid $secondary;
         font-size: 14px;
-        font-family: $second;
+        font-family: $serif;
 
         &.active {
-            border-color: $button;
+            border-color: $warning;
         }
 
-        &:hover {
-            border-bottom: 3px solid $secondary;
+        &:not(.active):hover {
+            border-bottom: 3px solid $info;
         }
     }
 }
