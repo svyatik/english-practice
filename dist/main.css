@@ -216,7 +216,7 @@ h3 {
   font-weight: 400;
   text-align: right; }
 
-.post body {
+body.post {
   background-color: #f9f9f9; }
 
 .post .content {
