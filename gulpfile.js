@@ -3,8 +3,8 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 
-// I use gulp wait because with my text editor (VS CODE)
-//   SASS compile files before they are totally saved.
+// I use wait() because with my text editor (VS CODE)
+//   SASS compile files before they are saved.
 var wait = require('gulp-wait2');
 var server = require('gulp-server-livereload');
 
@@ -18,7 +18,6 @@ gulp.task('sass', function() {
 // Watch task
 gulp.task('default', function() {
     gulp.src('')
-        .pipe(wait(200))
         .pipe(server({
             livereload: true,
             open: true
