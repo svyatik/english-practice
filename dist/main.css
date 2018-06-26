@@ -207,6 +207,36 @@ h3 {
   font-weight: 400;
   text-align: right; }
 
+body {
+  background-color: #f9f9f9; }
+
+.content {
+  margin-top: 50px; }
+
+h2 {
+  margin-top: 50px; }
+
+.color-wrapper {
+  background-color: #fff; }
+
+.post-container {
+  margin-top: 150px;
+  position: relative;
+  top: -100px;
+  font-size: 17px;
+  letter-spacing: 1.2px;
+  line-height: 1.5;
+  font-weight: 400;
+  box-shadow: 0 0 22px 4px rgba(0, 0, 0, 0.12);
+  padding: 35px;
+  background-color: #fff; }
+  .post-container img {
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 15px; }
+  .post-container p {
+    margin-bottom: 15px; }
+
 .btn-default {
   background-color: #f79f1f;
   border: none;
