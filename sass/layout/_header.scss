@@ -1,17 +1,28 @@
 .nav {
-    text-align: right;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+.nav-logo {
+    a {
+        display: block;
+        margin-top: 6px;
+    }
 }
 
 .nav-list {
     display: inline-flex;
+    text-align: right;
 
     a {
         color: $primary;
         padding: 10px 30px;
         display: inline-block;
-        border-bottom: 3px solid $secondary;
+        border-bottom: 3px solid transparent;
         font-size: 14px;
         font-family: $serif;
+        font-weight: 400;
 
         &.active {
             border-color: $warning;
