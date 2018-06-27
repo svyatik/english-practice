@@ -256,6 +256,8 @@ body.post {
     color: #3498db;
     padding: 10px 20px;
     font-weight: 400; }
+    .lessons .categories a:hover {
+      color: #f79f1f; }
 
 .lessons .lessons-content {
   margin-bottom: 50px;
@@ -268,6 +270,10 @@ body.post {
 
 .lessons .post-inner {
   padding: 10px 18px; }
+  .lessons .post-inner a {
+    color: #747d8c; }
+    .lessons .post-inner a:hover {
+      color: #f79f1f; }
 
 .lessons .categories-container h3 {
   border-bottom: 3px solid #3498db;
