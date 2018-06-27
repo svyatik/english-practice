@@ -11,9 +11,20 @@
             font-weight: $normal;
         }
     }
+
     .lessons-content {
         margin-bottom: 50px;
         margin-top: 50px;
+
+        .header-image {
+            margin-top: 40px;
+        }
+    }
+
+    .grid {
+        .col-5 {
+            box-shadow: $shadow;
+        }
     }
 
     .post-inner {

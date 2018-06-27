@@ -260,6 +260,11 @@ body.post {
 .lessons .lessons-content {
   margin-bottom: 50px;
   margin-top: 50px; }
+  .lessons .lessons-content .header-image {
+    margin-top: 40px; }
+
+.lessons .grid .col-5 {
+  box-shadow: 0 0 22px 4px rgba(0, 0, 0, 0.12); }
 
 .lessons .post-inner {
   padding: 10px 18px; }
