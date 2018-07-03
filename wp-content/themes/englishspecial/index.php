@@ -5,19 +5,9 @@
         <header class="header">
             <div class="container">
                 <nav class="nav">
-                    <?php if (false) { ?>
-                    <ul class="nav-list">
-                        <li>
-                            <a class="active" href="/">Sign Out</a>
-                        </li>
-                        <li>
-                            <a href="/lessons.html">Go Prod</a>
-                        </li>
-                    </ul>
-                    <?php } ?>
                     <div class="nav-logo">
                         <a href="/">
-                            <img src="/img/logo.png" width="60" alt="logo">
+                            <img src="<?php bloginfo('template_url'); ?>/img/logo.png" width="60" alt="logo">
                         </a>
                     </div>
                     <ul class="nav-list">
@@ -47,7 +37,7 @@
             </div>
 
             <div class="container-flex">
-                <img src="img/avatar.png" alt="">
+                <img src="<?php bloginfo('template_url'); ?>/img/avatar.png" alt="">
                 <h3 class="quote">
                     <span>— Spoken by billions, English is ...</span>
                     <span class="quote-lvl-2">Should I consider about English?...</span>
@@ -67,7 +57,7 @@
             <div class="container">
                 <div class="grid benefits-grid">
                     <div class="col-2">
-                        <img class="benefits-image" src="img/about-icons/vocabulary.png" width="125" height="125" alt="vocabulary">
+                        <img class="benefits-image" src="<?php bloginfo('template_url'); ?>/img/about-icons/vocabulary.png" width="125" height="125" alt="vocabulary">
                         <div>
                             <h3 class="benefits-title">Vocabulary</h3>
                             <p class="benefits-text">If you want to consider about something — you should really to know a good couple of English
@@ -76,7 +66,7 @@
                         </div>
                     </div>
                     <div class="col-2">
-                        <img class="benefits-image" src="img/about-icons/grammar.png" width="125" height="125" alt="grammar">
+                        <img class="benefits-image" src="<?php bloginfo('template_url'); ?>/img/about-icons/grammar.png" width="125" height="125" alt="grammar">
                         <div>
                             <h3 class="benefits-title">Grammar</h3>
                             <p class="benefits-text">If You want to talk — you should to know the English grammar frame. It is obviously.</p>
@@ -84,14 +74,14 @@
                     </div>
 
                     <div class="col-2">
-                        <img class="benefits-image" src="img/about-icons/reading.png" width="125" height="125" alt="reading">
+                        <img class="benefits-image" src="<?php bloginfo('template_url'); ?>/img/about-icons/reading.png" width="125" height="125" alt="reading">
                         <div>
                             <h3 class="benefits-title">Reading</h3>
                             <p class="benefits-text">Reading provides such features like Your pronunciation, increase Your vocabulary, speed of Your thoughts, etc... </p>
                         </div>
                     </div>
                     <div class="col-2">
-                        <img class="benefits-image" src="img/about-icons/listening.png" width="125" height="125" alt="listening">
+                        <img class="benefits-image" src="<?php bloginfo('template_url'); ?>/img/about-icons/listening.png" width="125" height="125" alt="listening">
                         <div>
                             <h3 class="benefits-title">Listening</h3>
                             <p class="benefits-text">You should to understand all that strange english words by hearing</p>
@@ -99,14 +89,14 @@
                     </div>
 
                     <div class="col-2">
-                        <img class="benefits-image" src="img/about-icons/writing.png" width="125" height="125" alt="writing">
+                        <img class="benefits-image" src="<?php bloginfo('template_url'); ?>/img/about-icons/writing.png" width="125" height="125" alt="writing">
                         <div>
                             <h3 class="benefits-title">Writing</h3>
                             <p class="benefits-text">Who knows that writing is also useful thing</p>
                         </div>
                     </div>
                     <div class="col-2">
-                        <img class="benefits-image" src="img/about-icons/speaking.png" width="125" height="125" alt="speaking">
+                        <img class="benefits-image" src="<?php bloginfo('template_url'); ?>/img/about-icons/speaking.png" width="125" height="125" alt="speaking">
                         <div>
                             <h3 class="benefits-title">Speaking</h3>
                             <p class="benefits-text">Tt is our main goal, to speak English cleary with a good pronunciation</p>
@@ -140,7 +130,7 @@
                                     <img src="http://via.placeholder.com/313x230" alt="grammar">
                                     <div class="post-inner">
                                         <h4><?php the_title(); ?></h4>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tristique tellus mauris, ac sagittis erat tincidunt ac. Duis pellentesque, massa at pulvinar varius, nunc erat tincidunt elit</p>
+                                        <p><?php the_excerpt() ?></p>
                                         <div class="button-container">
                                             <a class="btn-default" href="<?php the_permalink(); ?>">Read full</a>
                                         </div>
@@ -164,7 +154,7 @@
                 <h2>Happy learning</h2>
                 <h3>A new language means another vision of life</h3>
 
-                <img src="/img/find_tutor.png" alt="">
+                <img src="<?php bloginfo('template_url'); ?>/img/find_tutor.png" alt="">
                 <!-- <iframe allowtransparency="true" scrolling="no" frameborder="0" width="510" height="255" src="//rf.revolvermaps.com/5/f.php?i=5yf4ajpz6u9&amp;m=0&amp;h=255&amp;c=ff0000&amp;r=0" style="background: transparent;"></iframe> -->
 
                 <div class="container-flex">

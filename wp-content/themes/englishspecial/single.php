@@ -7,7 +7,7 @@
                 <nav class="nav">
                     <div class="nav-logo">
                         <a href="/">
-                            <img src="/img/logo.png" width="60" alt="logo">
+                            <img src="<?php bloginfo('template_url'); ?>/img/logo.png" width="60" alt="logo">
                         </a>
                     </div>
                     <ul class="nav-list">
@@ -46,7 +46,7 @@
                 <h2>Happy learning</h2>
                 <h3>A new language means another vision of life</h3>
 
-                <img src="/img/find_tutor.png" alt="">
+                <img src="<?php bloginfo('template_url'); ?>/img/find_tutor.png" alt="">
 
                 <div class="container-flex">
                     <h3 class="quote center">
