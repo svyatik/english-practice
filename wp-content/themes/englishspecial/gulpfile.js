@@ -2,6 +2,7 @@
 
 var gulp = require('gulp');
 var sass = require('gulp-sass');
+var rename = require('gulp-rename');
 
 // I use wait() because with my text editor (VS CODE)
 //   SASS compile files before they are saved.
@@ -12,15 +13,11 @@ gulp.task('sass', function() {
   return gulp.src('./sass/**/*.scss', {verbose: true})
     .pipe(wait(100))
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('./dist'));
+    .pipe(rename('style.css'))
+    .pipe(gulp.dest('./'));
 });
 
 // Watch task
 gulp.task('default', function() {
-/*     gulp.src('')
-        .pipe(server({
-            livereload: true,
-            open: true
-        })); */
   gulp.watch('./sass/**/*.scss', ['sass']);
 });
