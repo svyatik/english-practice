@@ -1,62 +1,11 @@
-<!-- ────────────────────────────────────────────────────────
-─██████████████─██████████████─██████████████─██████████████─
-─██░░░░░░░░░░██─██░░░░░░░░░░██─██░░░░░░░░░░██─██░░░░░░░░░░██─
-─██░░██████████─██░░██████░░██─██████░░██████─██░░██████████─
-─██░░██─────────██░░██──██░░██─────██░░██─────██░░██─────────
-─██░░██─────────██░░██████░░██─────██░░██─────██░░██████████─
-─██░░██─────────██░░░░░░░░░░██─────██░░██─────██░░░░░░░░░░██─
-─██░░██─────────██░░██████░░██─────██░░██─────██████████░░██─
-─██░░██─────────██░░██──██░░██─────██░░██─────────────██░░██─
-─██░░██████████─██░░██──██░░██─────██░░██─────██████████░░██─
-─██░░░░░░░░░░██─██░░██──██░░██─────██░░██─────██░░░░░░░░░░██─
-─██████████████─██████──██████─────██████─────██████████████─
-
-
-HEY! Looks like you are interested in coding?
-
-Well, we can be friends :)
-Send me an email to: <svyat.kovtun@gmail.com>
-and we can do cool things together!
-
-You can check my website as well <https://indelio.pro>
-
-Cats with us. Always.
-
--->
-
-<?php
-    session_start();
-?>
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="robots" content="noindex, nofollow">
-    <title>English Practice with Anatoljj</title>
-    <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500|Roboto+Slab:100,300,400" rel="stylesheet">
-    <link rel="stylesheet" href="dist/main.css">
-
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
-    <link rel="manifest" href="/favicons/site.webmanifest">
-    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="/favicons/favicon.ico">
-    <meta name="msapplication-TileColor" content="#2d89ef">
-    <meta name="msapplication-config" content="/favicons/browserconfig.xml">
-    <meta name="theme-color" content="#fff">
-</head>
+<?php get_header(); ?>
 
 <body>
     <div class="wrapper">
         <header class="header">
             <div class="container">
                 <nav class="nav">
-                    <?php if (isset($_SESSION["admin"])) { ?>
+                    <?php if (false) { ?>
                     <ul class="nav-list">
                         <li>
                             <a class="active" href="/">Sign Out</a>
@@ -178,67 +127,34 @@ Cats with us. Always.
             </div>
             <div class="container blog-container">
                 <div class="grid">
-                    <div class="col-3">
-                        <img src="http://via.placeholder.com/313x230" alt="grammar">
-                        <div class="post-inner">
-                            <h4>Lorem Ipsum</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tristique tellus mauris, ac sagittis erat tincidunt ac. Duis pellentesque, massa at pulvinar varius, nunc erat tincidunt elit</p>
-                            <div class="button-container">
-                                <a class="btn-default" href="/post.html">Read full</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <img src="http://via.placeholder.com/313x230" alt="grammar">
-                        <div class="post-inner">
-                            <h4>Lorem Ipsum</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tristique tellus mauris, ac sagittis erat tincidunt ac. Duis pellentesque, massa at pulvinar varius, nunc erat tincidunt elit</p>
-                            <div class="button-container">
-                                <a class="btn-default" href="/post.html">Read full</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <img src="http://via.placeholder.com/313x230" alt="grammar">
-                        <div class="post-inner">
-                            <h4>Lorem Ipsum</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tristique tellus mauris, ac sagittis erat tincidunt ac. Duis pellentesque, massa at pulvinar varius, nunc erat tincidunt elit</p>
-                            <div class="button-container">
-                                <a class="btn-default" href="/post.html">Read full</a>
-                            </div>
-                        </div>
-                    </div>
+                    <?php
+                        // the query
+                        $wpb_all_query = new WP_Query(array('post_type'=>'post', 'post_status'=>'publish', 'posts_per_page'=>-1));
+                    ?>
 
-                    <div class="col-3">
-                        <img src="http://via.placeholder.com/313x230" alt="grammar">
-                        <div class="post-inner">
-                            <h4>Lorem Ipsum</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tristique tellus mauris, ac sagittis erat tincidunt ac. Duis pellentesque, massa at pulvinar varius, nunc erat tincidunt elit</p>
-                            <div class="button-container">
-                                <a class="btn-default" href="/post.html">Read full</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <img src="http://via.placeholder.com/313x230" alt="grammar">
-                        <div class="post-inner">
-                            <h4>Lorem Ipsum</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tristique tellus mauris, ac sagittis erat tincidunt ac. Duis pellentesque, massa at pulvinar varius, nunc erat tincidunt elit</p>
-                            <div class="button-container">
-                                <a class="btn-default" href="/post.html">Read full</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <img src="http://via.placeholder.com/313x230" alt="grammar">
-                        <div class="post-inner">
-                            <h4>Lorem Ipsum</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tristique tellus mauris, ac sagittis erat tincidunt ac. Duis pellentesque, massa at pulvinar varius, nunc erat tincidunt elit</p>
-                            <div class="button-container">
-                                <a class="btn-default" href="/post.html">Read full</a>
-                            </div>
-                        </div>
-                    </div>
+                    <?php if ( $wpb_all_query->have_posts() ) : ?>
+                        <ul>
+                            <!-- the loop -->
+                            <?php while ( $wpb_all_query->have_posts() ) : $wpb_all_query->the_post(); ?>
+                                <div class="col-3">
+                                    <img src="http://via.placeholder.com/313x230" alt="grammar">
+                                    <div class="post-inner">
+                                        <h4><?php the_title(); ?></h4>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tristique tellus mauris, ac sagittis erat tincidunt ac. Duis pellentesque, massa at pulvinar varius, nunc erat tincidunt elit</p>
+                                        <div class="button-container">
+                                            <a class="btn-default" href="<?php the_permalink(); ?>">Read full</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php endwhile; ?>
+                            <!-- end of the loop -->
+
+                        </ul>
+                    <?php wp_reset_postdata(); ?>
+
+                    <?php else: ?>
+                        <?php _e( 'Sorry, no posts matched your criteria.' ); ?>
+                    <?php endif; ?>
                 </div>
             </div>
         </section>
