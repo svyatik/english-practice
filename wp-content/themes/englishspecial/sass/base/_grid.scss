@@ -1,0 +1,35 @@
+.container {
+    max-width: $container;
+    margin: 0 auto;
+}
+
+.container-flex {
+    display: flex;
+    justify-content: center;
+}
+
+.center {
+    text-align: center;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+
+    .col-2 {
+        flex: 1 0 50%;
+        padding: 15px;
+    }
+
+    .col-3 {
+        width: calc(33.3333% - 30px);
+        margin: 15px;
+    }
+
+    .col-5 {
+        width: calc(20% - 30px);
+        margin: 15px;
+    }
+}

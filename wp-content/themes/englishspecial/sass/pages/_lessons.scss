@@ -1,0 +1,56 @@
+.lessons {
+    .categories {
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+        margin-bottom: 25px;
+
+        a {
+            color: $info;
+            padding: 10px 20px;
+            font-weight: $normal;
+
+            &:hover {
+                color: $warning;
+            }
+        }
+    }
+
+    .lessons-content {
+        margin-bottom: 50px;
+        margin-top: 50px;
+
+        .header-image {
+            margin-top: 40px;
+        }
+    }
+
+    .grid {
+        .col-5 {
+            box-shadow: $shadow;
+        }
+    }
+
+    .post-inner {
+        padding: 10px 18px;
+
+        a {
+            color: $primary;
+
+            &:hover {
+                color: $warning;
+            }
+        }
+    }
+
+    .categories-container {
+        h3 {
+            border-bottom: 3px solid $info;
+            padding: 10px 0;
+            display: inline-block;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            min-width: 300px;
+        }
+    }
+}
