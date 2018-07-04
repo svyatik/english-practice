@@ -31,7 +31,6 @@ Cats with us. Always.
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="robots" content="noindex, nofollow">
     <title>English Practice with Anatoljj</title>
@@ -47,5 +46,37 @@ Cats with us. Always.
     <meta name="msapplication-config" content="/favicons/browserconfig.xml">
     <meta name="theme-color" content="#fff">
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <?php do_action('wp_head'); ?>
 </head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <nav class="nav">
+                    <div class="nav-logo">
+                        <a href="/">
+                            <img src="<?php bloginfo('template_url'); ?>/img/logo.png" width="60" alt="logo">
+                        </a>
+                    </div>
+                    <?php
+                        wp_nav_menu(array(
+                            'theme_location' => 'header',
+                            'container_class' => 'nav-list'));
+                    ?>
+                    <!-- <ul class="nav-list">
+                        <li>
+                            <a class="active" href="/">Home</a>
+                        </li>
+                        <li>
+                            <a href="/lessons.html">Lessons</a>
+                        </li>
+                        <li>
+                            <a href="/articles.html">Articles</a>
+                        </li>
+                    </ul> -->
+                </nav>
+            </div>
+        </header>

@@ -1,7 +1,8 @@
 .nav {
     display: flex;
     justify-content: space-between;
-    padding-top: 20px;
+    padding: 20px 0;
+    line-height: 30px;
 }
 
 .nav-logo {
@@ -12,24 +13,38 @@
 }
 
 .nav-list {
-    display: inline-flex;
-    text-align: right;
+    #menu-general {
+        display: inline-flex;
+        text-align: right;
 
-    a {
-        color: $primary;
-        padding: 10px 30px;
-        display: inline-block;
-        border-bottom: 3px solid transparent;
-        font-size: 14px;
-        font-family: $serif;
-        font-weight: 400;
+        li {
+            a {
+                color: $primary;
+                padding: 10px 30px;
+                display: inline-block;
+                border-bottom: 3px solid transparent;
+                font-size: 14px;
+                font-family: $serif;
+                font-weight: 400;
+            }
 
-        &.active {
-            border-color: $warning;
+            &:hover {
+                a {
+                    border-bottom: 3px solid $info;
+                }
+            }
+
+            &.current-menu-item {
+                a {
+                    border-color: $warning;
+                }
+            }
         }
+    }
+}
 
-        &:not(.active):hover {
-            border-bottom: 3px solid $info;
-        }
+@media only screen and (max-width: 768px) {
+    .nav-logo {
+        display: none;
     }
 }

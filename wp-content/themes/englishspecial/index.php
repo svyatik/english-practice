@@ -1,29 +1,5 @@
 <?php get_header(); ?>
 
-<body>
-    <div class="wrapper">
-        <header class="header">
-            <div class="container">
-                <nav class="nav">
-                    <div class="nav-logo">
-                        <a href="/">
-                            <img src="<?php bloginfo('template_url'); ?>/img/logo.png" width="60" alt="logo">
-                        </a>
-                    </div>
-                    <ul class="nav-list">
-                        <li>
-                            <a class="active" href="/">Home</a>
-                        </li>
-                        <li>
-                            <a href="/lessons.html">Lessons</a>
-                        </li>
-                        <li>
-                            <a href="/articles.html">Articles</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
         <section class="intro">
             <div class="container">
                 <h1>English online conversation</h1>
@@ -31,7 +7,7 @@
             </div>
 
             <div class="background">
-                <iframe width="700" height="420" src="https://www.youtube-nocookie.com/embed/ZwVs5TBMGxU?rel=0&amp;showinfo=0" frameborder="0"
+                <iframe src="https://www.youtube-nocookie.com/embed/ZwVs5TBMGxU?rel=0&amp;showinfo=0" frameborder="0"
                     allow="autoplay; encrypted-media" allowfullscreen>
                 </iframe>
             </div>
@@ -119,27 +95,30 @@
                 <div class="grid">
                     <?php
                         // the query
-                        $wpb_all_query = new WP_Query(array('post_type'=>'post', 'post_status'=>'publish', 'posts_per_page'=>-1));
+                        $wpb_all_query = new WP_Query(array('post_type'=>'lessons', 'post_status'=>'publish', 'posts_per_page'=>-1));
                     ?>
 
                     <?php if ( $wpb_all_query->have_posts() ) : ?>
-                        <ul>
-                            <!-- the loop -->
-                            <?php while ( $wpb_all_query->have_posts() ) : $wpb_all_query->the_post(); ?>
-                                <div class="col-3">
-                                    <img src="http://via.placeholder.com/313x230" alt="grammar">
-                                    <div class="post-inner">
-                                        <h4><?php the_title(); ?></h4>
-                                        <p><?php the_excerpt() ?></p>
-                                        <div class="button-container">
-                                            <a class="btn-default" href="<?php the_permalink(); ?>">Read full</a>
-                                        </div>
+                        <?php while ( $wpb_all_query->have_posts() ) : $wpb_all_query->the_post(); ?>
+                            <div class="col-3">
+                                <?php
+                                    $image = get_field('post_image');
+                                    $size = 'medium'; // (thumbnail, medium, large, full or custom size)
+                                    if($image) {
+                                        $image_url = wp_get_attachment_image_src($image, $size); ?>
+                                        <div class="post-image" style="background-image: url(<?php echo $image_url[0] ?>)"></div>
+                                <?php } else { ?>
+                                    <div class="post-image" style="background-image: url(<?php bloginfo('template_url'); ?>/img/no-image.svg)"></div>
+                                <?php } ?>
+                                <div class="post-inner">
+                                    <h4><?php the_title(); ?></h4>
+                                    <p><?php the_excerpt() ?></p>
+                                    <div class="button-container">
+                                        <a class="btn-default" href="<?php the_permalink(); ?>">Read full</a>
                                     </div>
                                 </div>
-                            <?php endwhile; ?>
-                            <!-- end of the loop -->
-
-                        </ul>
+                            </div>
+                        <?php endwhile; ?>
                     <?php wp_reset_postdata(); ?>
 
                     <?php else: ?>
@@ -149,31 +128,4 @@
             </div>
         </section>
 
-        <section class="bottom">
-            <div class="container center">
-                <h2>Happy learning</h2>
-                <h3>A new language means another vision of life</h3>
-
-                <img src="<?php bloginfo('template_url'); ?>/img/find_tutor.png" alt="">
-                <!-- <iframe allowtransparency="true" scrolling="no" frameborder="0" width="510" height="255" src="//rf.revolvermaps.com/5/f.php?i=5yf4ajpz6u9&amp;m=0&amp;h=255&amp;c=ff0000&amp;r=0" style="background: transparent;"></iframe> -->
-
-                <div class="container-flex">
-                    <h3 class="quote center">
-                        <span>— Are you afraid of making mistakes?</span>
-                        <span>I never make the same mistake twice.</span>
-                        <span>I make it five or six times just to be sure</span>
-                        <p>" NeNe Leakes</p>
-                    </h3>
-                </div>
-            </div>
-        </section>
-
-        <section class="footer">
-            <div class="container">
-                <p>Copyright © 2018</p>
-            </div>
-        </section>
-    </div>
-</body>
-
-</html>
+<?php get_footer() ?>
