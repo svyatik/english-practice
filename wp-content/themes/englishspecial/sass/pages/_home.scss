@@ -1,0 +1,297 @@
+// Special styles
+// *****************
+
+.intro,
+.benefits,
+.benefits-grid,
+.blog-container {
+    margin-top: 50px;
+}
+
+h1, h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+// Quote widget with 2 lines
+.quote {
+    text-align: left;
+    font-family: $serif;
+    font-style: italic;
+    position: relative;
+
+    &.center {
+        text-align: center;
+    }
+
+    span {
+        display: block;
+    }
+
+    p {
+        text-align: center;
+        font-size: 16px;
+        font-weight: $bold;
+    }
+
+    // Different levels of text
+    .quote-lvl-2 {
+        margin-left: 30px;
+    }
+
+    .quote-lvl-4 {
+        margin-left: 30px;
+    }
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        opacity: .2;
+        background-color: $quote-border;
+    }
+}
+
+.intro {
+    text-align: center;
+    color: $primary;
+    position: relative;
+    background-image: url(../../img/background_1.png);
+    background-size: cover;
+    background-position: center;
+
+    .background {
+        padding: 60px 0;
+
+        iframe {
+            box-shadow: $shadow;
+            width: 700px;
+            height: 420px;
+        }
+    }
+
+    img {
+        border-radius: 50%;
+        width: 130px;
+        height: 130px;
+        margin-right: 40px;
+    }
+
+    // Custom quote lines
+    .quote {
+        // horizontal
+        &::before {
+            width: 150px;
+            height: 3px;
+            bottom: 22px;
+            right: -8%;
+        }
+
+        // vertical
+        &::after {
+            width: 3px;
+            height: 120px;
+            bottom: 22px;
+            right: -30px;
+        }
+    }
+}
+
+.benefits {
+    background-color: $gray;
+    padding: 50px 0;
+
+    .read-more {
+        justify-content: flex-end;
+
+        p {
+            font-size: 18px;
+        }
+
+        a {
+            color: $warning;
+        }
+    }
+}
+
+.benefits {
+    .benefits-grid {
+        .col-2 {
+            display: flex;
+        }
+
+        .benefits-image {
+            width: 125px;
+            height: 125px;
+            margin-right: 20px;
+            flex-basis: 0;
+        }
+
+        .benefits-title {
+            font-size: 20px;
+            font-weight: 400;
+        }
+
+        .benefits-text {
+            font-family: $serif;
+            color: $primary;
+        }
+    }
+}
+
+.blog {
+    padding: 50px 0;
+
+    .grid {
+        .col-3 {
+            box-shadow: $shadow;
+        }
+
+        .post-image {
+            width: 100%;
+            height: 180px;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .post-image_small {
+            height: 120px;
+        }
+
+        .post-inner {
+            padding: 18px;
+        }
+
+        .button-container {
+            text-align: right;
+        }
+
+        h4 {
+            font-weight: $normal;
+            font-size: 20px;
+        }
+
+        p {
+            font-family: $serif;
+            color: $primary;
+        }
+    }
+}
+
+.bottom {
+    padding: 50px 0;
+    background-color: $gray;
+    background-image: url(/img/background_footer.png);
+    background-position: center bottom;
+    background-size: cover;
+
+    h3 {
+        margin-bottom: 30px;
+    }
+
+    img {
+        box-shadow: $shadow;
+    }
+
+    .container-flex {
+        margin-top: 40px;
+        font-family: $serif;
+
+        // Custom quote lines
+        .quote {
+            font-size: 18px;
+
+            // horizontal
+            &::before {
+                width: 100px;
+                height: 3px;
+                bottom: 22px;
+                right: -10%;
+            }
+
+            // vertical
+            &::after {
+                width: 3px;
+                height: 80px;
+                bottom: 22px;
+                right: -30px;
+            }
+        }
+    }
+}
+
+.footer {
+    background-color: $dark;
+    padding: 10px 0;
+    color: #fff;
+    font-weight: $normal;
+    text-align: right;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .intro {
+        .background {
+            iframe {
+                width: 350px;
+                height: 210px;
+            }
+        }
+
+        img {
+            margin-right: 0;
+        }
+    }
+
+    .benefits {
+        .grid {
+            flex-direction: column;
+
+            .col-2 {
+                flex: 1;
+                display: block;
+                text-align: center;
+
+                img {
+                    margin-right: 0;
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+
+    .blog {
+        .grid {
+            flex-direction: column;
+
+            .col-3 {
+                display: block;
+                width: calc(100% - 30px);
+                padding: 15px;
+            }
+
+            .post-inner {
+                padding: 18px 0;
+            }
+        }
+    }
+
+    .quote {
+        font-size: 18px;
+        padding: 25px;
+        text-align: center;
+    }
+
+    .quote::before,
+    .quote::after {
+        content: none;
+    }
+
+    .container-flex {
+        display: block;
+    }
+}

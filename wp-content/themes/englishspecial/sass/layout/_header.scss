@@ -1,0 +1,50 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    line-height: 30px;
+}
+
+.nav-logo {
+    a {
+        display: block;
+        margin-top: 6px;
+    }
+}
+
+.nav-list {
+    #menu-general {
+        display: inline-flex;
+        text-align: right;
+
+        li {
+            a {
+                color: $primary;
+                padding: 10px 30px;
+                display: inline-block;
+                border-bottom: 3px solid transparent;
+                font-size: 14px;
+                font-family: $serif;
+                font-weight: 400;
+            }
+
+            &:hover {
+                a {
+                    border-bottom: 3px solid $info;
+                }
+            }
+
+            &.current-menu-item {
+                a {
+                    border-color: $warning;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .nav-logo {
+        display: none;
+    }
+}

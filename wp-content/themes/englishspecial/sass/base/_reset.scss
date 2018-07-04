@@ -1,0 +1,39 @@
+
+// _reset
+// *********
+
+html {
+    -webkit-font-smoothing: antialiased; // Antialiasing.
+    -moz-osx-font-smoothing: grayscale; // Antialiasing.
+    // Change from `box-sizing: content-box` so that `width`
+    // is not affected by `padding` or `border`.
+
+    box-sizing: border-box;
+
+    *, *::before, *::after {
+        box-sizing: inherit;
+    }
+}
+
+body {
+    margin: 0;
+    background-color: $body;
+    font-family: $sans-serif;
+    font-weight: $light;
+    -webkit-text-size-adjust: 100%;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-weight: inherit;
+}
