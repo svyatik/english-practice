@@ -3,6 +3,11 @@ server details.txt
 
 wp-admin
 wp-includes
+wp-content/plugins
+wp-content/uploads
+wp-content/upgrade
+wp-content/themes/englishspecial/node_modules
+wp-content/index.php
 .htaccess
 index.php
 license.txt
