@@ -274,6 +274,7 @@ h3 {
   margin-top: 50px; }
   .post-content .post-image img {
     max-width: 1000px;
+    width: 100%;
     height: auto; }
   .post-content h2 {
     margin: 30px 0; }
@@ -281,7 +282,7 @@ h3 {
     display: flex;
     justify-content: center; }
   .post-content .post-container {
-    margin: 20px 40px 0 40px;
+    margin: 20px 40px 50px 40px;
     max-width: 900px;
     font-size: 17px;
     letter-spacing: 1.2px;
@@ -330,15 +331,22 @@ sidebar {
     width: auto; } }
 
 @media only screen and (max-width: 768px) {
-  .post img {
+  .post-wrapper {
+    flex-direction: column-reverse; }
+  sidebar {
+    margin: 20px; }
+  .post-content img {
     width: 100%; }
-  .post .post-container {
+  .post-content .post-container {
     margin-left: 0;
     margin-right: 0;
     padding: 35px 15px;
     word-wrap: break-word;
     line-height: 1.1;
-    font-size: 14px; } }
+    font-size: 14px;
+    margin-bottom: 0; }
+    .post-content .post-container img {
+      width: 100%; } }
 
 .blog {
   /* .post-inner {
